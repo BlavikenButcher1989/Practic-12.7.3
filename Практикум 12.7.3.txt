@@ -1,0 +1,11 @@
+money = int(input("Введите сумму: "))
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+per_cent_value = list(per_cent.values())
+tkb = round(per_cent_value[0]/100*money)
+skb = round(per_cent_value[1]/100*money)
+vtb = round(per_cent_value[2]/100*money)
+sber = round(per_cent_value[3]/100*money)
+deposit = [tkb, skb, vtb, sber]
+print("Доход: ", deposit)
+deposit.sort()
+print("Максимальная сумма, которую вы можете заработать:  ", deposit[-1])
